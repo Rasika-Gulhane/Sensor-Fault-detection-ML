@@ -14,10 +14,6 @@ def get_requiremensts() -> List[str]:
         # Exclude lines starting with '-e' (editable mode)
             if not line.startswith('-e'):
                 requirement_list.append(line.strip())
-        
-    
-
-    
     return requirement_list
     
 

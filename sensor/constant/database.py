@@ -1,0 +1,5 @@
+DATABASE_NAME= "RG_MongoDB"
+COLLECTION_NAME= "car"
+
+
+
