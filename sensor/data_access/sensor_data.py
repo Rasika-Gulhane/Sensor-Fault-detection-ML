@@ -39,17 +39,16 @@ class SensorData:
                 collection = self.mongo_client.database[collection_name]
             else:
                 collection = self.mongo_client[database_name][collection_name]
+            logging.info("data reciever reach MongoDB but not collected")
             df = pd.DataFrame(list(collection.find()))
+            logging.info("data collected from MongoDB")
 
             if "_id" in df.columns.to_list():
                 df = df.drop(columns=["_id"], axis=1)
 
             df.replace({"na": np.nan}, inplace=True)
-            logging.info("success sensor data")
 
             return df
-        
-        
 
         except Exception as e:
             raise SensorException(e, sys)
