@@ -10,11 +10,14 @@ import sys
 
      
 if __name__ == '__main__':
+    # try:
     training_pipeline = TrainPipeline()
     training_pipeline.run_pipeline()
     # sesnor_data = SensorData()
     # dataframe = sesnor_data.export_collection_as_dataframe(collection_name = 'car')
 
+    # except Exception as e:
+    #     logging.exception(e)
    
 
    
