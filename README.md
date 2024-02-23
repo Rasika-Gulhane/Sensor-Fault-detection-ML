@@ -17,3 +17,65 @@ In this project, the system in focus is the Air Pressure system (APS) which gene
 The problem is to reduce the cost due to unnecessary repairs. So it is required to minimize the false predictions.
 
 
+# AWS S3 bucket Sync API Reference
+
+1. Login to AWS account
+2. Create IAM user for deployment
+
+    * with Specific access:
+    - EC2 access: It is virtiual machine
+    - S3 bucket access: To store artifact and model in s3
+    - ECR : (Elastic Container Registry) : To save your Docker Image in aws
+
+    * Description:
+    - Build Docker image
+    - push your docker img to ECR
+    - launch your EC2
+    - pull your imag from ECR to EC2
+    - lauch you docker image in EC2
+
+    Policy:
+	1. AmazonEC2ContainerRegistryFullAccess
+	2. AmazonEC2FullAccess
+	3. AmazonS3FullAccess
+
+
+3. Create a s3 bukcet in ap-south-1
+	bucket name: sensor-training-model
+	
+4. ECR repo to store/save docker image
+	367512584047.dkr.ecr.us-east-1.amazonaws.com/sensor_repo
+	
+5. EC2 machine  Ubuntu  Created 
+    (instance created) then connect the instance
+
+6. Open EC2 and Install docker in EC2 Machine 
+	
+	#optinal
+	sudo apt-get update -y
+	sudo apt-get upgrade
+	
+	#required
+	curl -fsSL https://get.docker.com -o get-docker.sh
+	sudo sh get-docker.sh
+	sudo usermod -aG docker ubuntu
+	newgrp docker
+	
+7. Configure EC2 as self-hosted runner
+
+setting> actions> runner> new self hosted runner> choose your os> 
+then run command one by one
+
+8. Setup github secrets
+
+AWS_ACCESS_KEY_ID=
+
+AWS_SECRET_ACCESS_KEY=
+
+AWS_REGION=ap-south-1
+
+AWS_ECR_LOGIN_URI=566373416292.dkr.ecr.ap-south-1.amazonaws.com
+
+ECR_REPOSITORY_NAME=sensor-fault
+
+MONGO_DB_URL=mongodb+srv://avnish:Aa327030@cluster0.or68e.mongodb.net/admin?authSource=admin&replicaSet=atlas-desfdx-shard-0&w=majority&readPreference=primary&appname=MongoDB%20Compass&retryWrites=true&ssl=true
