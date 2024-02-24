@@ -17,8 +17,9 @@ In this project, the system in focus is the Air Pressure system (APS) which gene
 The problem is to reduce the cost due to unnecessary repairs. So it is required to minimize the false predictions.
 
 # Project Successs
-1. <img width="1434" alt="Workflow Action continuous integration with AWS" src="https://github.com/Rasika-Gulhane/Sensor-Fault-detection-ML/assets/67581952/e9a0e4ac-24b8-4456-be05-c3b473689418">
-2. <img width="1433" alt="Successfully Run on EC2 server" src="https://github.com/Rasika-Gulhane/Sensor-Fault-detection-ML/assets/67581952/f3460894-1a51-4133-b0fe-06e9854f2491">
+1. Workflow Action continuous integration with AWS <img width="1434" alt="Workflow Action continuous integration with AWS" src="https://github.com/Rasika-Gulhane/Sensor-Fault-detection-ML/assets/67581952/e9a0e4ac-24b8-4456-be05-c3b473689418">
+
+2. Successfully Run on EC2 server <img width="1433" alt="Successfully Run on EC2 server" src="https://github.com/Rasika-Gulhane/Sensor-Fault-detection-ML/assets/67581952/f3460894-1a51-4133-b0fe-06e9854f2491">
 
 # AWS S3 bucket Sync API Reference
 
