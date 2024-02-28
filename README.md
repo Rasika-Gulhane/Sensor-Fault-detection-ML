@@ -1,5 +1,6 @@
 # Sensor-Fault-detection-ML 
 IOT sensor streaming data from kafka to MongoDB and detecting fault using ML model within live data
+Check https://github.com/Rasika-Gulhane/Sensor_Fault_Detection for data data streaming model
 
 Dataset is taken from Scania website for heavy-duty truck's APS device that captures data:
 https://www.scania.com/
